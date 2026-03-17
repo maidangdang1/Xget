@@ -46,6 +46,7 @@
 [![Rust](https://img.shields.io/badge/Rust-000000?logo=rust&logoColor=white)](#rust-package-acceleration)
 [![Packagist](https://img.shields.io/badge/Packagist-F28D1A?logo=packagist&logoColor=white)](#php-package-acceleration)
 [![Flathub](https://img.shields.io/badge/Flathub-000000?logo=flathub&logoColor=white)](#flathub-repository-mirror)
+[![OpenWrt](https://img.shields.io/badge/OpenWrt-00B5E2?logo=openwrt&logoColor=white)](#openwrt-firmware-and-package-acceleration)
 [![Debian](https://img.shields.io/badge/Debian-A81D33?logo=debian&logoColor=white)](#debianubuntu-apt-configuration)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?logo=ubuntu&logoColor=white)](#debianubuntu-apt-configuration)
 [![Fedora](https://img.shields.io/badge/Fedora-51A2DA?logo=fedora&logoColor=white)](#fedora-dnf-configuration)
@@ -1813,6 +1814,51 @@ OSTREE_DEBUG_HTTP=1 flatpak remote-ls flathub
 
 # Update installed apps and runtimes
 flatpak update
+```
+
+### OpenWrt Firmware and Package Acceleration
+
+#### Download OpenWrt Firmware and Packages via Xget
+
+```bash
+# Download OpenWrt firmware
+wget https://xget.xi-xu.me/openwrt/releases/23.05.5/targets/ramips/mt7621/openwrt-23.05.5-ramips-mt7621-xiaomi_mi-router-4a-gigabit-squashfs-sysupgrade.bin
+
+# Download OpenWrt packages
+wget https://xget.xi-xu.me/openwrt/releases/23.05.5/packages/mipsel_24kc/base/libc_1.2.4-4_mipsel_24kc.ipk
+
+# Download OpenWrt ImageBuilder
+wget https://xget.xi-xu.me/openwrt/releases/23.05.5/targets/ramips/mt7621/openwrt-imagebuilder-23.05.5-ramips-mt7621.Linux-x86_64.tar.xz
+```
+
+#### Supported OpenWrt Services
+
+```url
+# OpenWrt releases
+https://xget.xi-xu.me/openwrt/releases/...
+
+# OpenWrt snapshots
+https://xget.xi-xu.me/openwrt/snapshots/...
+
+# OpenWrt packages
+https://xget.xi-xu.me/openwrt/releases/.../packages/...
+https://xget.xi-xu.me/openwrt/snapshots/.../packages/...
+```
+
+#### Usage Examples
+
+```bash
+# Download specific firmware version
+wget https://xget.xi-xu.me/openwrt/releases/23.05.5/targets/ramips/mt7621/openwrt-23.05.5-ramips-mt7621-xiaomi_mi-router-4a-gigabit-squashfs-sysupgrade.bin
+
+# Download packages for specific architecture
+wget https://xget.xi-xu.me/openwrt/releases/23.05.5/packages/mipsel_24kc/base/libc_1.2.4-4_mipsel_24kc.ipk
+
+# Download ImageBuilder for custom builds
+wget https://xget.xi-xu.me/openwrt/releases/23.05.5/targets/ramips/mt7621/openwrt-imagebuilder-23.05.5-ramips-mt7621.Linux-x86_64.tar.xz
+
+# Download snapshot builds
+wget https://xget.xi-xu.me/openwrt/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-xiaomi_mi-router-4a-gigabit-squashfs-sysupgrade.bin
 ```
 
 ### Linux Distribution Acceleration
